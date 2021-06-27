@@ -1,0 +1,19 @@
+<template>
+    <c-p2c-alert-component
+    message="Hurray !! I got the data"
+    card-heading="Parent to Child primitive data communication"
+    number=20
+    is-valid
+    ></c-p2c-alert-component>
+
+    <div class="slds-var-m-bottom_medium"></div>
+    <c-p2c-carousel-component carousel-details={carouselData}></c-p2c-carousel-component>
+    
+    <div class="slds-var-m-bottom_medium"></div>
+    <lightning-input type="number"
+    label="Enter percentage"
+    onkeyup={changeHandler}
+    value={valuesetfromparent}
+    ></lightning-input>
+    <c-p2c-Progress-Bar percent={valuesetfromparent}></c-p2c-Progress-Bar> 
+</template>
